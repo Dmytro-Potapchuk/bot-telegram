@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment variables
+.env
+.idea
+# macOS
+.DS_Store
+
