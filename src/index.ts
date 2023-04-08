@@ -1,12 +1,15 @@
-import dotenv from 'dotenv';
-import { Bot } from './Components/Bot/Bot';
 import cron from 'node-cron';
-
+import dotenv from 'dotenv';
 dotenv.config();
 
-const TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
+import { Bot } from './Components/Bot/Bot';
 
-const bot = new Bot({ token: TOKEN, timezone: 'Europe/Warsaw' });
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
+const TIMEZONE = process.env.TIMEZONE!;
+
+const bot = new Bot({ token: TOKEN, timezone: TIMEZONE });
+
+// const bot = new Bot({ token: TOKEN, timezone: 'Europe/Warsaw' });
 
 // Отримуємо погоду о 7:30 за місцевим часом у Варшаві
 cron.schedule('30 7 * * *', async () => {
