@@ -10,8 +10,9 @@ export class Weather {
     private readonly apiKey: string; // Ключ API
     private readonly city: string; // Назва міста
 
+
     constructor(timezone: string) {
-        this.apiKey = 'd1e6e055eac0e5ed7a1bb5e735e34b5c'; // API ключ для доступу до погодних даних
+        this.apiKey = process.env.WEATHER_API_KEY; // API ключ для доступу до погодних даних
         this.city = timezone; // Назва міста для отримання погоди
     }
 
