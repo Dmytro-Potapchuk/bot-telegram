@@ -16,12 +16,11 @@ class Weather {
         if (!response.data || !response.data.name || !response.data.main || !response.data.main.temp || !response.data.weather || !response.data.weather[0].description) {
             throw new Error('Could not find weather data for specified city.');
         }
-        const weatherData = {
+        return {
             city: response.data.name,
             temperature: response.data.main.temp,
             description: response.data.weather[0].description,
         };
-        return weatherData;
     }
 }
 exports.Weather = Weather;

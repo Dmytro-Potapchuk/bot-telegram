@@ -18,3 +18,5 @@ cron.schedule('30 7 * * *', async () => {
 });
 
 bot.start();
+
+

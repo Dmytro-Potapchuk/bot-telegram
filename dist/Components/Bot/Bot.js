@@ -47,7 +47,7 @@ class Bot {
     }
     sendMessage(text) {
         if (this.chatId !== undefined) {
-            this.bot.sendMessage(this.chatId, text);
+            this.bot.sendMessage(this.chatId, text).then(r => r);
         }
     }
 }
